@@ -1,0 +1,22 @@
+{
+  "name": "scorerestapi",
+  "version": "1.0.0",
+  "description": "Rest API for Big Rex Software Score App",
+  "main": "server.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.10",
+    "slugify": "^1.3.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "scripts": {
+    "start": "NODE_ENV=production node server",
+    "dev": "nodemon server"
+  },
+  "author": "Robert Haasch",
+  "license": "MIT"
+}
