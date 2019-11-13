@@ -20,20 +20,15 @@ const LinkSchema = new mongoose.Schema(
             maxLength: [80, 'Title can not be more than 80 characters']
         },
         slug: String,
-        source: {
-            type: String,
-            trim: true,
-            maxLength: [80, 'Source can not be more than 80 characters']
-        },
         author: {
             type: String,
             trim: true,
             maxLength: [80, 'Author can not be more than 80 characters']
         },
-        target: {
+        description: {
             type: String,
             trim: true,
-            maxLength: [20, 'Target can not be more than 20 characters']
+            maxLength: [300, 'Description can not be more than 300 characters']
         },
         category: {
             type: mongoose.Schema.ObjectId,
