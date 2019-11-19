@@ -42,7 +42,7 @@ const LinkSchema = new mongoose.Schema(
     }
 )
 
-// Create bootcamp slug from the name
+// Create slug from the title
 LinkSchema.pre('save', function(next) {
     this.slug = slugify(this.title, { lower: true });
     next();
