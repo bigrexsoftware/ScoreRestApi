@@ -1,0 +1,190 @@
+Score Backend API Specifications - VERSION 1
+
+roverjobs.com
+roverlist.com
+
+Create the backend for a links directory website. The frontend/UI will be created by another team. The html/css template will be created separately. All of the functionality below needs to be fully implemented in this project.
+
+Version 1 - Problems to Solve
+	Primary audience: me
+	Secondary audience: People looking for an easier way to learn in an organized manner
+	Setup authentication and a user database for BRS to use.
+	Store resources for links and videos to use on the site.
+	Make it easier to aggregate and organize resources without having to manually enter them in WordPress
+	Help me become familiar with React, Node, Express, and Mongo.
+	
+Version 2a - Problems to Solve
+	Primary audience: Hairdressers who don't want to lose their favorite clients
+	Seondary audience: People like me who hate it when our favorite vendors disappear and we have to hunt them down
+	How do you know when your favorite hairdresser has moved to a diffent work place?
+	An easy way for them to gather client lists and notify them of changes
+	Hand out a business card with personalized web address on it
+	Works for:
+		recruiters
+		hairdressers
+		nail salon workers
+		mobile vendors
+		food trucks
+		etc
+
+
+Version 2b - Problems to Solve
+	Primary audience: Recruiters who want better ROI on looking for qualified candidates
+	Secondary audience: Me to make it easier to find the best jobs
+	Get better quality job listings for job hunters to look at
+	Get company and job posting information up front rather than going through interviews first
+	Generate better leads for recruiters
+	Higher quality postings get higher scores and better search rank
+	Charge more for job postings unless they have more information. $499 down to $49.99.
+	Increase transparency for postings
+	Anonymous reviews of job postings
+	Encrypt all user information to promote security and privacy
+	Setup a quiz and answer section to help job hunters, recruiters, and companies match up more accurately
+	Help recruiters find more qualified and interested leads with less cold calling
+	Reward recruiters with better leads if they post better information
+	Database importer to make it easier to import information
+	
+Version 2 - Marketing
+	Setup fake user with number.
+	My phone won't stop ringing. Forward calls to a message to login. Autoreply texts and emails to a link.
+	Go online, apply, and get them to contact me. Forward them to website.
+	Cold call recruiters to get them to join.
+	Call recruiters I know best to get them to help out.
+	Offer discount codes to help populate database.
+
+
+Links
+	List all links in the database
+		Pagination
+		Select specific fields in result
+		Limit number of results
+		Filter by fields
+		Sorting
+	Get a single link
+	Get links belonging to a category
+		Pagination
+		Select specific fields in result
+		Limit number of results
+		Filter by fields
+		Sorting
+	Create new link
+		Authenticated users only
+		Role of "publisher" or "admin"
+		Field validation via Mongoose
+	Upload a photo for a link
+		Authenticated users only
+		Role of "publisher" or "admin"
+	Update a link
+		Authenticated users only
+		Role of "publisher" or "admin"
+	Delete a link
+		Authenticated users only
+		Role of "publisher" or "admin"
+	
+
+Categories
+	List all categories in the database
+		Pagination
+		Select specific fields in result
+		Limit number of results
+		Filter by fields
+		Sorting
+	Get a single category
+	Create new category
+		Authenticated users only
+		Role of "publisher" or "admin"
+		Field validation via Mongoose
+	Upload a photo for a category
+		Authenticated users only
+		Role of "publisher" or "admin"
+	Update a category
+		Authenticated users only
+		Role of "publisher" or "admin"
+	Delete a category
+		Authenticated users only
+		Role of "publisher" or "admin"
+
+
+Users & Authentication
+	Authentication will be done using JWT/cookies
+		JWT and cookie should expire in 7 days
+	User registration
+		Register as a "user" or "publisher"
+		Once registered, a token will be sent with a cookie (token = xx)
+		Passwords must be hashed
+		User info must be encrypted
+	User login
+		User can login with email and password
+		Plain text password will compare with stored hashed password?
+		Once logged in, a token will be sent along with a cookie (token = xx)
+	User logout
+		Cookie will be set token = none
+	Get user
+		Route to get the currently logged in user (via token)
+	Password reset
+		User can request to reset password
+		A hashed token will be emailed to the user's registered email address
+		A put request can be made to the generated url to reset password
+		The token will expire after 10 minutes
+	Update user info
+		Authenticated user only
+		Separate route to update the password
+	User CRUD
+		Admin only
+	Users can only be made admin by updating database field manually
+	
+Security
+	Encrypt passwords and reset tokens
+	Encrypt user info
+	Prevent NoSQL injections
+	Add headers for security (helmet)
+	Prevent cross site scripting - XSS
+	Add a rate limit for requests of 100 requests per 10 minutes
+	Protect against http param pollution
+	Use cors to make API public (for now) - set to private after finished
+	
+Documentation
+	Use Postman to create documentation
+	Use docgen to create HTML files from Postman
+	Add html files as the / route for the api - for now
+	
+Deployment (DO)
+	Push to Github
+	Create a droplet
+	Clone repo to server
+	Use PM2 process manager
+	Enable firewall (ufw) and open needed ports
+	Create an NGINX reverse proxy for port 80
+	Connect a domain name
+	Install an SSL using Let's Encrypt
+	
+Code Related Suggestions
+	NPM scripts for dev and production env
+	Config file for important constants
+	Use controller methods with documented descriptions/routes
+	Error handling middleware
+	Authentication middleware for protecting routes and setting user roles
+	Validation using Mongoose and no external libraries
+	Use async/await (Create middleware to clean up controller methods)
+	Create a database seeder to import and destroy data
+	
+Questions
+	Password being sent plaintext to the api?
+	
+Monetization	
+	Upsell to private listings +$5/month
+	Native ads
+	$5 to send an email to list about updates, +$10 over 1,000, +$20 over 10,000
+	job postings priced based on content quality
+	company listings priced based on content quality
+	found a job? tip us $50
+	recurring revenue?
+	donation button
+	Stripe, Braintree, Paypal, Typeform
+	Slack and Discourse forums
+
+		
+		
+		
+		
+		
