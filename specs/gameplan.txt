@@ -1,8 +1,12 @@
-1. Improve day job
-	Excel Match
+
+Big Rex Software Business Plan - https://bigrex.com/business-plan/
+
+1. Improve skills to benefit my day job
 2. Develop side projects
 	Links interface
-	Score
+	Score API
+	Score React app
+	CSS template
 	Standardize res import/export, import export tool
 3. Daily training on new tech
 4. Find a medium freelance software side gig after first of year
@@ -14,12 +18,13 @@ Skills
 	Excel Match project
 	Finish first udemy course
 	Review Semantic items
-	Start node js course
+	Continue node js course
 	Learn react
 	Learn node/express
 	Learn Redux
 	React Native
 	React/Node unit testing
+	Postman JavaScript unit testing
 
 ---------- Concurrent
 
@@ -38,11 +43,11 @@ Make list of tech apis from courses
 	uuid
 	nodemon
 
-* Finish php rest api from Traversy
+Finish php rest api from Traversy
 Documentation of api calls - docgen from postman
 Rewrite in node after node course
 
-* Setup links database
+Setup links database
 Setup list page
 Setup edit page
 Page template
@@ -61,25 +66,7 @@ Start working on score app
 	translate uml into crud and actions list
 
 
------------
-
-
-show up and be consistent
-	listen to books
-	sleep schedule
-	working out
-		goals
-	meditation and gratitude
-		insight timer
-		start off day being appreciative of what you have
-		keep a journal
-		how can you deal with a thing
-		keep a todo list - notebook
-	creative flexibility
-		new skills
-		flexible with time as things come up
-		balance return on investment
-		balance passion with what you like to do
+---------------
 
 * setup database
 	links
@@ -103,4 +90,24 @@ digital ocean
 netlify
 heroku
 github pages
+
+-----------
+
+
+show up and be consistent
+	listen to books
+	sleep schedule
+	working out
+		goals
+	meditation and gratitude
+		insight timer
+		start off day being appreciative of what you have
+		keep a journal
+		how can you deal with a thing
+		keep a todo list - notebook
+	creative flexibility
+		new skills
+		flexible with time as things come up
+		balance return on investment
+		balance passion with what you like to do
 
