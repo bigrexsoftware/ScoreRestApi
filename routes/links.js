@@ -20,5 +20,4 @@ router.route('/:id')
     .put(updateLink)
     .delete(deleteLink);
 
-
 module.exports = router;
